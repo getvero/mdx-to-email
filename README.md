@@ -19,7 +19,7 @@ Difference between each type of element:
 
 ## Video walkthrough
 
-<iframe style="border:0;" width="800" height="450" src="https://www.tella.tv/video/cmigyijpk000004jx4hufft8n/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0" allowfullscreen allowtransparency></iframe>
+https://github.com/user-attachments/assets/4409a94d-2e01-4759-a9ef-fd07a3c7a77a
 
 ## Install and run
 
