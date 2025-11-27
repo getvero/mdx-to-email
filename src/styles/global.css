@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+  color: #2297F4;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.text-primary-dark, .text-primary-dark .paragraph div {
+  color: #2936A3 !important;
+}

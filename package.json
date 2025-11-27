@@ -1,0 +1,30 @@
+{
+  "name": "mdx-to-mjml-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faire/mjml-react": "^3.5.0",
+    "commander": "^13.1.0",
+    "gray-matter": "^4.0.3",
+    "mjml": "5.0.0-alpha.6",
+    "next-mdx-remote": "^5.0.0",
+    "prettier": "^3.0.0",
+    "react": "^19.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-mdx": "^3.1.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "terser": "^5.44.0",
+    "unified": "^11.0.5"
+  },
+  "overrides": {
+    "mjml": "5.0.0-alpha.6"
+  }
+}
