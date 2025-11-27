@@ -1,19 +1,21 @@
 ## The use case
 
-I write our newsletters in Markdown or Google Docs (which exports to Markdown).
+I write our newsletters in Google Docs which exports nicely to Markdown.
 
-Inspired by [Josh W Comeau](https://www.joshwcomeau.com/react/wonderful-emails-with-mjml-and-mdx/#composing-emails-with-mdx), I wanted a way to write once, in Markdown, and convert to a blog post and an email.
+Inspired by [Josh W Comeau](https://www.joshwcomeau.com/react/wonderful-emails-with-mjml-and-mdx/#composing-emails-with-mdx), I wanted a way to write in Markdown and generate both a blog post and an email.
+
+This repository generates emails from `.mdx` files.
 
 ## What it does
 
 - Takes an `.mdx` file as input.
-- Uses a library of components, sections and snippets.
-- Renders `.mjml` and then `.html` files.
+- References a library of components, sections and snippets.
+- Renders `.mjml` and `.html` files.
 
 Difference between each type of element:
 - **Component:** low-level building block, like `<p>`.
-- **Section:** MJML is divided into "sections". These elements support the use of sections.
-- **Snippet:** A pre-built design "snippet" that makes use of several components (or potentially sections).
+- **Section:** MJML is divided into "sections". These elements support the creation of different section layouts.
+- **Snippet:** A pre-designed "snippet" that makes use of several components.
 
 ## Install and run
 
@@ -28,16 +30,11 @@ bun install
 Run it:
 
 ```
-bun main.js
+bun main.js inputs/name-of-input-file.mdx
 ```
 
 ## Things I'd like to do in the future
 
-- Specify input file on the command line.
-- Re-architect away from one large `main.js` file.
-- Support different "themes".
-  - These could be different folders of components, with the styles coded into the components.
-  - If inlining works properly, the components might be similar but the styles stored globally in a `.css` file (I've started with this but not nailed it).
-- Support [React Email](https://react.email). I am familiar with MJML but React Email might be simpler with `.mdx`. 
-  - Supporting both might be cool. I.e. choose whether a "theme" is in Markdown or React Email.
-- Automatically detect which components have an `MjmlSection` component as these need to be handled differently.
+- Refactor away from one large `main.js` file.
+- Support different themes/brands. This might be as simple as including different `.css` files but the inlining doesn't seem to work as fully as I'd like yet. 
+- Automatically detect which components have an `MjmlSection` component as these need to be handled differently during rendering.
