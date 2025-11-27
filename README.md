@@ -17,6 +17,10 @@ Difference between each type of element:
 - **Section:** MJML is divided into "sections". These elements support the creation of different section layouts.
 - **Snippet:** A pre-designed "snippet" that makes use of several components.
 
+## Video walkthrough
+
+<iframe style="border:0;" width="800" height="450" src="https://www.tella.tv/video/cmigyijpk000004jx4hufft8n/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0" allowfullscreen allowtransparency></iframe>
+
 ## Install and run
 
 Install [Bun](https://bun.sh) with their install script.
@@ -38,3 +42,7 @@ bun main.js inputs/name-of-input-file.mdx
 - Refactor away from one large `main.js` file.
 - Support different themes/brands. This might be as simple as including different `.css` files but the inlining doesn't seem to work as fully as I'd like yet. 
 - Automatically detect which components have an `MjmlSection` component as these need to be handled differently during rendering.
+
+## License
+
+MIT license.
