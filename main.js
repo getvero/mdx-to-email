@@ -16,6 +16,7 @@ import remarkStringify from "remark-stringify";
 import { unified } from "unified";
 
 // Import our source components
+import Code from "./src/components/content/Code.jsx";
 import Em from "./src/components/content/Em.jsx";
 import H1 from "./src/components/content/H1.jsx";
 import H2 from "./src/components/content/H2.jsx";
@@ -24,6 +25,7 @@ import Hr from "./src/components/content/Hr.jsx";
 import Li from "./src/components/content/Li.jsx";
 import Ol from "./src/components/content/Ol.jsx";
 import Paragraph from "./src/components/content/Paragraph.jsx";
+import Pre from "./src/components/content/Pre.jsx";
 import Table from "./src/components/content/Table.jsx";
 import Td from "./src/components/content/Td.jsx";
 import Tr from "./src/components/content/Tr.jsx";
@@ -71,6 +73,7 @@ const cssPath = "./src/styles/global.css";
 
 const MDX_COMPONENTS = {
 	p: Paragraph,
+	pre: Pre,
 	h1: H1,
 	h2: H2,
 	h3: H3,
@@ -78,6 +81,7 @@ const MDX_COMPONENTS = {
 	ul: Ul,
 	ol: Ol,
 	li: Li,
+	code: Code,
 	em: Em,
 	table: Table,
 	tr: Tr,
