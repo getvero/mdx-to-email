@@ -15,6 +15,30 @@ import remarkParse from "remark-parse";
 import remarkStringify from "remark-stringify";
 import { unified } from "unified";
 
+// Import our source components
+import Em from "./src/components/content/Em.jsx";
+import H1 from "./src/components/content/H1.jsx";
+import H2 from "./src/components/content/H2.jsx";
+import H3 from "./src/components/content/H3.jsx";
+import Hr from "./src/components/content/Hr.jsx";
+import Li from "./src/components/content/Li.jsx";
+import Ol from "./src/components/content/Ol.jsx";
+import Paragraph from "./src/components/content/Paragraph.jsx";
+import Table from "./src/components/content/Table.jsx";
+import Td from "./src/components/content/Td.jsx";
+import Tr from "./src/components/content/Tr.jsx";
+import Ul from "./src/components/content/Ul.jsx";
+import Column from "./src/components/sections/Column.jsx";
+import MultipleColumns from "./src/components/sections/MultipleColumns.jsx";
+import SingleColumn from "./src/components/sections/SingleColumn.jsx";
+import Footer from "./src/components/snippets/Footer.jsx";
+import Header from "./src/components/snippets/Header.jsx";
+import IntroBlueBackground from "./src/components/snippets/IntroBlueBackground.jsx";
+import ProductFeature from "./src/components/snippets/ProductFeature.jsx";
+
+// Import our templates
+import WeeklyNewsletterTemplate from "./src/templates/WeeklyNewsletterTemplate.jsx";
+
 program
 	.name("mdx-to-mjml")
 	.description("Convert MDX files to MJML/HTML email templates")
@@ -43,40 +67,7 @@ if (!fs.existsSync(outputDir)) {
 const mjmlOutputPath = path.join(outputDir, inputFile.replace(".mdx", ".mjml"));
 const htmlOutputPath = path.join(outputDir, inputFile.replace(".mdx", ".html"));
 
-import WeeklyNewsletterTemplate from "./src/templates/WeeklyNewsletterTemplate.jsx";
-
 const cssPath = "./src/styles/global.css";
-
-import Em from "./src/components/content/Em.jsx";
-import H1 from "./src/components/content/H1.jsx";
-import H2 from "./src/components/content/H2.jsx";
-import H3 from "./src/components/content/H3.jsx";
-import Hr from "./src/components/content/Hr.jsx";
-import Li from "./src/components/content/Li.jsx";
-import Ol from "./src/components/content/Ol.jsx";
-import Paragraph from "./src/components/content/Paragraph.jsx";
-import Table from "./src/components/content/Table.jsx";
-import Td from "./src/components/content/Td.jsx";
-import Tr from "./src/components/content/Tr.jsx";
-import Ul from "./src/components/content/Ul.jsx";
-import Column from "./src/components/sections/Column.jsx";
-import MultipleColumns from "./src/components/sections/MultipleColumns.jsx";
-import SingleColumn from "./src/components/sections/SingleColumn.jsx";
-import Footer from "./src/components/snippets/Footer.jsx";
-import Header from "./src/components/snippets/Header.jsx";
-import IntroBlueBackground from "./src/components/snippets/IntroBlueBackground.jsx";
-import ProductFeature from "./src/components/snippets/ProductFeature.jsx";
-
-// Define components that contain MjmlSection
-// (these will be used to render different MjmlSections correctly)
-const COMPONENTS_CONTAINING_SECTION = [
-	"SingleColumn",
-	"MultipleColumns",
-	"Header",
-	"Footer",
-	"Hr",
-	"IntroBlueBackground",
-];
 
 const MDX_COMPONENTS = {
 	p: Paragraph,
@@ -99,6 +90,17 @@ const MDX_COMPONENTS = {
 	Header,
 	Footer,
 };
+
+// Define components that contain MjmlSection.
+// These will be used to render different MjmlSections correctly.
+const COMPONENTS_CONTAINING_SECTION = [
+	"SingleColumn",
+	"MultipleColumns",
+	"Header",
+	"Footer",
+	"Hr",
+	"IntroBlueBackground",
+];
 
 // We wrap any components that *do not* have an MjmlSection component in a SingleColumn component.
 // The SingleColumn component introduces an MjmlSection wrapper.
