@@ -12,7 +12,6 @@ function Pre({ children }) {
         cssClass="code-block"
         color="#333333"
         padding="16px"
-        borderRadius="4px"
         backgroundColor="#f6f8fa"
         containerBackgroundColor="#f6f8fa"
       >
