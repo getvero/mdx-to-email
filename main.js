@@ -1,19 +1,19 @@
 #!/usr/bin/env bun
 
-import fs from "fs";
-import path from "path";
-import { program } from "commander";
-import prettier from "prettier";
-import matter from "gray-matter";
-import { unified } from "unified";
-import mjml2html from "mjml";
-import remarkParse from "remark-parse";
-import remarkMdx from "remark-mdx";
-import remarkGfm from "remark-gfm";
-import remarkStringify from "remark-stringify";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 import { renderToMjml } from "@faire/mjml-react/utils/renderToMjml";
+import { program } from "commander";
+import fs from "fs";
+import matter from "gray-matter";
+import mjml2html from "mjml";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import path from "path";
+import prettier from "prettier";
+import remarkGfm from "remark-gfm";
+import remarkMdx from "remark-mdx";
+import remarkParse from "remark-parse";
+import remarkStringify from "remark-stringify";
+import { unified } from "unified";
 
 program
 	.name("mdx-to-mjml")
@@ -47,25 +47,25 @@ import WeeklyNewsletterTemplate from "./src/templates/WeeklyNewsletterTemplate.j
 
 const cssPath = "./src/styles/global.css";
 
-import Paragraph from "./src/components/content/Paragraph.jsx";
+import Em from "./src/components/content/Em.jsx";
 import H1 from "./src/components/content/H1.jsx";
 import H2 from "./src/components/content/H2.jsx";
 import H3 from "./src/components/content/H3.jsx";
 import Hr from "./src/components/content/Hr.jsx";
-import Ul from "./src/components/content/Ul.jsx";
-import Ol from "./src/components/content/Ol.jsx";
 import Li from "./src/components/content/Li.jsx";
-import Em from "./src/components/content/Em.jsx";
+import Ol from "./src/components/content/Ol.jsx";
+import Paragraph from "./src/components/content/Paragraph.jsx";
+import Table from "./src/components/content/Table.jsx";
 import Td from "./src/components/content/Td.jsx";
 import Tr from "./src/components/content/Tr.jsx";
-import Table from "./src/components/content/Table.jsx";
+import Ul from "./src/components/content/Ul.jsx";
 import Column from "./src/components/sections/Column.jsx";
-import SingleColumn from "./src/components/sections/SingleColumn.jsx";
 import MultipleColumns from "./src/components/sections/MultipleColumns.jsx";
-import Header from "./src/components/snippets/Header.jsx";
+import SingleColumn from "./src/components/sections/SingleColumn.jsx";
 import Footer from "./src/components/snippets/Footer.jsx";
-import ProductFeature from "./src/components/snippets/ProductFeature.jsx";
+import Header from "./src/components/snippets/Header.jsx";
 import IntroBlueBackground from "./src/components/snippets/IntroBlueBackground.jsx";
+import ProductFeature from "./src/components/snippets/ProductFeature.jsx";
 
 // Define components that contain MjmlSection
 // (these will be used to render different MjmlSections correctly)
