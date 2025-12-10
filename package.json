@@ -8,18 +8,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@faire/mjml-react": "^3.5.0",
+    "@faire/mjml-react": "^3.5.3",
     "commander": "^13.1.0",
     "gray-matter": "^4.0.3",
     "mjml": "5.0.0-alpha.6",
     "next-mdx-remote": "^5.0.0",
-    "prettier": "^3.0.0",
-    "react": "^19.0.0",
+    "prettier": "^3.7.4",
+    "react": "^19.2.1",
     "remark-gfm": "^4.0.1",
-    "remark-mdx": "^3.1.0",
+    "remark-mdx": "^3.1.1",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
-    "terser": "^5.44.0",
+    "terser": "^5.44.1",
     "unified": "^11.0.5"
   },
   "overrides": {
